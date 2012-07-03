@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function($){
+			    ancho = $(window).width();
+
+			    if(ancho < 800){
+			    	$('#imagen').attr('src','600.png');
+				}
+				else if(ancho < 1024){
+					$('#imagen').attr('src','800.png');
+				}
+				else if (ancho > 1023) {
+					$('#imagen').attr('src','1024.png');
+				};
+			});
+		</script>
+
+		<style>
+			#imagen{
+				width: 100%;
+				height: auto;
+			}
+		</style>
+
+		
+	</head>
+
+
+
+	<body>
+		<img name="imagen" id="imagen" >
+	</body>
+</html>
